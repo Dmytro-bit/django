@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static "journal.css" %}" rel="stylesheet" >
+</head>
+<body>
+<h1>Введіть текст для запису в журнал</h1>
+<p id="message">
+
+    {{message}}
+</p>
+<form method="post">
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" value="записать">
+</form>
+
+</body>
+</html>

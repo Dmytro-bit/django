@@ -5,7 +5,8 @@ import sys
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'test1.settings')
+    """Run administrative tasks."""
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'test_s.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -19,6 +20,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-from django.db import connection
-cursor = connection.cursor()
